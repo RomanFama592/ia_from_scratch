@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Train & Predict IA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            text-align: center;
+        }
+
+        div {
+            padding: 1%;
+            margin: 1%;
+            border: 3px solid black;
+            border-radius: 10px
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./declarations.js" defer></script>
+    <script src="./utils.js" defer></script>
+    <script src="./events.js" defer></script>
+    <script src="./declarations.js" defer></script>
+</head>
+
+<body>
+
+    <div>
+        <h1>bg</h1>
+        <input type="range" id="bginput" min="0" max="255" step="1">
+        <div id="bgoutput">texto de prueba</div>
+    </div>
+
+    <div>
+        <h1>text</h1>
+        <input type="checkbox" id="predict" checked>
+        <input type="color" id="text">
+        <button id="randomColor">color al azar</button>
+    </div>
+
+    <div>
+        <h1>Trainsamples</h1>
+        <input type="number" id="Tsamples" placeholder="train samples" value="100" step="100">
+        <h1>LR</h1>
+        <input type="number" id="lr" placeholder="LR" value="0.1" step="0.1">
+    </div>
+
+    <div>
+        <button id="sendE">send example</button>
+        <button id="remove_last_example">remove last example</button>
+        <button id="train">train</button>
+        <button id="save">save progress</button>
+    </div>
+
+    <canvas id="myChart"></canvas>
+
+</body>
+
+</html>
